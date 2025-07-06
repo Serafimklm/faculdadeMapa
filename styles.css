@@ -230,19 +230,22 @@ main {
             align-items: center;
         }
 
-        .terminal-prompt {
-            color: #00ff00;
-            margin-right: 8px;
-        }
+      .terminal-prompt {
+    display: inline-block;
+    white-space: nowrap; /* Isso impede que o texto quebre */
+    margin-right: 5px;
+}
 
-        #terminal-cmd {
-            background: transparent;
-            border: none;
-            color: #00ff00;
-            font-family: 'Ubuntu Mono', monospace;
-            width: 100%;
-            outline: none;
-        }
+#terminal-cmd {
+    display: inline-block;
+    flex: 1;
+    min-width: 50px; /* Garante um tamanho mínimo */
+    background: transparent;
+    border: none;
+    outline: none;
+    color: inherit;
+    font-family: inherit;
+}
 
         .mini-cursor {
             display: inline-block;
