@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre - Meu Portfólio</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <!-- Fundo animado do FinisherHeader -->
+    <div class="header finisher-header" style="width: 100vw; height: 100vh; position: fixed; top: 0; left: 0; z-index: -1;">
+        <!-- FinisherHeader será renderizado aqui -->
+    </div>
+
+    <header>
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html">~/home</a></li>
+                <li><a href="sobre.html">/sobre</a></li>
+                <li><a href="portfolio.html">/portfolio</a></li>
+                <li><a href="contato.html">/contato</a></li>
+              </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>informações para contato</h1>
+        <p>Bem-vindo à página contato! Aqui você encontrará informações sobre meus contatos</p>
+
+        <!----------------------- Terminal GNU nano html----------------->
+        <div class="nano-terminal">
+            <div class="nano-header">
+                GNU nano 7.2 - sobre.txt
+            </div>
+            <div class="nano-body">
+                <p>Contato:</p>
+                <p>- Telegram: <a href="https://t.me/Seraffiim" target="_blank">Telegram Contact</a></p>
+                <p>- Github: <a href="https://github.com/Serafimklm" target="_blank">Git Account</a></p>
+                <p>- Linkedin: <a href="https://linkedin.com/in/joaovitorklm" target="_blank">Linkedin Contact</a></p>
+               
+            </div>
+            <div class="nano-footer">
+                ^G Ajuda    ^O Gravar    ^W Onde está?    ^K Recortar    ^C Local
+            </div>
+        </div>
+    </main>
+       <!-- ----------------------Terminal GNU nano -------------------->
+    
+    <footer>
+        <p>Terminal Portfolio v1.0.0 - &copy; 2025</p>
+    </footer>
+
+    <!-- --------------------Terminal flutuante da lateral ------------>
+    <div class="mini-terminal">
+        <div class="terminal-header">
+            <span>Terminal Portfolio v1.0.0</span>
+            <span>Created</span>
+        </div>
+        <div class="terminal-body" id="terminal-output">
+            <div>Bem-vindo ao terminal de navegação</div>
+            <div>Digite "help" para ver os comandos</div>
+            <div>------------------------------------</div>
+        </div>
+        <div class="terminal-input">
+            <span class="terminal-prompt">user@contato:$</span>
+            <input type="text" id="terminal-cmd" autofocus>
+           
+        </div>
+    </div>
+<!-- ----------Terminal flutuante da lateral  EFEITO INTERATIVO-------->
+
+
+
+    <!-------Script para inicializar o FinisherHeader EFEITO INIMADO----->
+    <script src="finisher-header.es5.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        new FinisherHeader({
+          "count": 4,
+          "size": {
+            "min": 1312,
+            "max": 1500,
+            "pulse": 0
+          },
+          "speed": {
+            "x": {
+              "min": 0.6,
+              "max": 3
+            },
+            "y": {
+              "min": 0.6,
+              "max": 3
+            }
+          },
+          "colors": {
+            "background": "#000000",
+            "particles": [
+              "#423d3d",
+              "#000000",
+              "#000000",
+              "#505050"
+            ]
+          },
+          "blending": "lighten",
+          "opacity": {
+            "center": 0.6,
+            "edge": 0
+          },
+          "skew": -2,
+          "shapes": [
+            "c"
+          ]
+        });
+        </script>
+   <script src="portfolio.js" defer></script>  <!-- Script para funcionalidades do terminal -->
+</body>
+</html>

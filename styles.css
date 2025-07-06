@@ -1,0 +1,814 @@
+/* Estilo Terminal Deepin (verde/preto) */
+body {
+    font-family: 'Ubuntu Mono', monospace;
+    background-color: #000000;
+    color: #00ff00;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #000000;
+    color: #00ff00;
+    padding: 8px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    border-bottom: 1px solid #00ff00;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 20px;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #00ff00;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: all 0.3s;
+}
+
+nav ul li a:hover {
+    background: #00ff00;
+    color: #000000;
+}
+
+main {
+    padding: 80px 20px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.terminal-container {
+    margin: 100px auto;
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border: 1px solid #00ff00;
+}
+
+.terminal-output {
+    min-height: 200px;
+    margin-bottom: 15px;
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+.command-line {
+    display: flex;
+    align-items: center;
+}
+
+.prompt {
+    color: #00ff00;
+    margin-right: 10px;
+}
+
+#command-input {
+    background: transparent;
+    border: none;
+    color: #00ff00;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 1em;
+    width: 80%;
+    outline: none;
+    caret-color: #00ff00;
+}
+
+.blinking-cursor {
+    display: inline-block;
+    width: 8px;
+    height: 20px;
+    background: #00ff00;
+    animation: blink 1s infinite;
+}
+.projeto img {
+    #projetos {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 300px; /* Espaço entre os projetos */
+    max-width: 1200px; /* Largura máxima do container */
+    margin: 0 auto; /* Centraliza na página */
+    background-color: aqua; /* Fundo branco que pode parecer uma borda */
+}   
+    border: 2px solid #06ec4b; /* Destaca a área da imagem */
+    width: 100%;
+    height: auto;
+}
+.projeto {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fa0000be; /* Fundo branco que pode parecer uma borda */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(98, 0, 255, 0.884); /* Sombra suave */
+}
+#projetos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Alterado para space-around */
+    gap: 20px; /* Reduzi o gap para caber 3 itens */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.projeto {
+    opacity: 50%;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+    padding: 20px;
+    border-radius: 8px;
+    background: hsla(0, 5%, 31%, 0.06);
+    width: calc(33.33% - 20px); /* Alterado para 33.33% para 3 colunas */
+    min-width: 300px;
+    box-sizing: border-box;
+    margin: 10px 0;
+    flex-grow: 1; /* Permite que os itens cresçam igualmente */
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    overflow: hidden;
+}
+
+.carousel img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel img.active {
+    opacity: 1;
+}
+
+
+@keyframes blink {
+    0%, 100% { opacity: 1};
+    50% { opacity: 0; }
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 160px); /* Ajuste conforme necessário */
+    padding: 80px 20px;
+    box-sizing: border-box;
+}
+
+.terminal-container {
+    width: 100%;
+    max-width: 800px; /* Ajuste conforme necessário */
+    margin: 20px auto;
+}
+
+
+
+/*contato styles*/
+        h1, h2, p {
+            text-align: center;
+            color: hwb(0 79% 21%); /* Define a mesma cor usada na página index */
+        }
+
+        /* Terminal Mini - Estilo do terminal */
+        .mini-terminal {
+    position: fixed; /* Faz o terminal flutuar na página */
+    bottom: 20px; /* Posiciona na parte inferior da página */
+    left: 20px; /* Posiciona à esquerda */
+    width: 360px; /* Largura fixa */
+    max-width: 480px; /* Limita a largura máxima */
+    background: rgba(0, 0, 0, 0.9); /* Fundo escuro com transparência */
+    border: 1px solid #00ff00; /* Borda verde */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 12px; /* Espaço interno */
+    z-index: 1000; /* Mantém acima do conteúdo */
+    font-family: 'Ubuntu Mono', monospace; /* Fonte estilo terminal */
+    color: #00ff00; /* Texto verde */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
+        }
+
+        /* Ajuste para telas menores ou quando o espaço é insuficiente */
+        @media (max-height: 600px) {
+            .mini-terminal {
+                position: static; /* Remove o posicionamento fixo */
+                margin: 20px auto; /* Centraliza o terminal abaixo do GNU nano */
+                width: 100%; /* Faz o terminal ocupar toda a largura */
+                max-width: 480px; /* Limita a largura máxima */
+            }
+        }
+
+        .terminal-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 0.9em;
+        }
+
+        .terminal-body {
+            height: 120px; /* Aumenta a altura em 20% (antes era 100px) */
+            overflow-y: auto; /* Permite rolagem se necessário */
+            margin-bottom: 10px;
+        }
+
+        .terminal-input {
+            display: flex;
+            align-items: center;
+        }
+
+        .terminal-prompt {
+            color: #00ff00;
+            margin-right: 8px;
+        }
+
+        #terminal-cmd {
+            background: transparent;
+            border: none;
+            color: #00ff00;
+            font-family: 'Ubuntu Mono', monospace;
+            width: 100%;
+            outline: none;
+        }
+
+        .mini-cursor {
+            display: inline-block;
+            width: 8px;
+            height: 16px;
+            background: #00ff00;
+            animation: blink 1s infinite;
+        }
+
+        /* Estilo do terminal GNU nano */
+        .nano-terminal {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            min-height: 280px; /* Limita a altura do terminal */
+            margin: 20px auto; /* Centraliza o terminal */
+            background: #000000; /* Fundo preto */
+            border: 2px solid #00ff00; /* Borda verde */
+            border-radius: 5px; /* Bordas arredondadas */
+            color: #00ff00; /* Texto verde */
+            font-family: 'Ubuntu Mono', monospace; /* Fonte estilo terminal */
+            padding: 10px; /* Espaço interno */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
+        }
+
+        .nano-header {
+            background: #00ff00; /* Fundo verde */
+            color: #000000; /* Texto preto */
+            padding: 5px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .nano-body {
+            height: 200px; /* Altura do terminal */
+            overflow-y: auto; /* Permite rolagem se necessário */
+            padding: 10px;
+            line-height: 1.6;
+        }
+
+        .nano-footer {
+            background: #00ff00; /* Fundo verde */
+            color: #000000; /* Texto preto */
+            padding: 5px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        /* Estilo global para todos os links */
+        a {
+            color: #0509e2; /* Define a cor verde para todos os links */
+            text-decoration: none; /* Remove o sublinhado padrão */
+        }
+
+        a:hover {
+            color: rgb(0, 17, 255); /* Cor mais clara ao passar o mouse */
+            text-decoration: underline; /* Adiciona sublinhado no hover */
+        }
+
+        /* ESTILO DA BARRA INFERIOR DA PAGINA */
+        footer {
+            position: fixed; /* Fixes the footer at the bottom of the viewport */
+            bottom: 0; /* Aligns the footer to the bottom */
+            width: 100%; /* Makes the footer span the entire width of the page */
+            background: hsla(0, 0%, 0%, 0.795); /* Black background */
+            color: #00ff00; /* Green text */
+            text-align: center; /* Centers the text */
+            padding: 10px; /* Adds padding for spacing */
+            font-size: 0.9em; /* Adjusts the font size */
+            z-index: 1000; /* Ensures the footer stays above other content */
+            border-top: 1px solid #00ff00; /* Adds a green border at the top */
+        }
+
+        /* -----------------------SOBRE STYLES Contato--------------------- */
+        h1, h2, p {
+            text-align: center;
+            color: hwb(0 79% 21%); /* Define a mesma cor usada na página index */
+        }
+
+        /* Terminal Mini - Estilo do terminal */
+        .mini-terminal {
+            position: fixed; /* Faz o terminal flutuar na página */
+            bottom: 20px; /* Posiciona na parte inferior da página */
+            left: 20px; /* Posiciona à esquerda */
+            width: 360px; /* Aumenta a largura em 20% (antes era 300px) */
+            max-width: 480px; /* Limita a largura máxima */
+            background: rgba(0, 0, 0, 0.9); /* Fundo escuro com transparência */
+            border: 1px solid #00ff00; /* Borda verde */
+            border-radius: 5px; /* Bordas arredondadas */
+            padding: 12px; /* Aumenta o espaço interno */
+            z-index: 1000; /* Mantém acima do conteúdo */
+            font-family: 'Ubuntu Mono', monospace; /* Fonte estilo terminal */
+            color: #00ff00; /* Texto verde */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
+        }
+
+        /* Estilo para o mini-terminal em telas maiores */
+        @media (min-width: 769px) {
+            .mini-terminal {
+                position: fixed; /* Faz o terminal flutuar na página */
+                bottom: 20px; /* Posiciona na parte inferior da página */
+                left: 20px; /* Posiciona à esquerda */
+                width: 360px; /* Largura fixa */
+                max-width: 480px; /* Limita a largura máxima */
+                background: rgba(0, 0, 0, 0.9); /* Fundo escuro com transparência */
+                border: 1px solid #00ff00; /* Borda verde */
+                border-radius: 5px; /* Bordas arredondadas */
+                padding: 12px; /* Espaço interno */
+                z-index: 1000; /* Mantém acima do conteúdo */
+                font-family: 'Ubuntu Mono', monospace; /* Fonte estilo terminal */
+                color: #00ff00; /* Texto verde */
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
+            }
+        }
+
+        /* Ajuste para telas menores ou quando o espaço é insuficiente */
+        @media (max-height: 600px) {
+            .mini-terminal {
+                position: static; /* Remove o posicionamento fixo */
+                margin: 20px auto; /* Centraliza o terminal abaixo do GNU nano */
+                width: 100%; /* Faz o terminal ocupar toda a largura */
+                max-width: 480px; /* Limita a largura máxima */
+            }
+        }
+
+        .terminal-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 0.9em;
+        }
+
+        .terminal-body {
+            height: 120px; /* Aumenta a altura em 20% (antes era 100px) */
+            overflow-y: auto; /* Permite rolagem se necessário */
+            margin-bottom: 10px;
+        }
+
+        .terminal-input {
+            display: flex;
+            align-items: center;
+        }
+
+        .terminal-prompt {
+            color: #00ff00;
+            margin-right: 8px;
+        }
+
+        #terminal-cmd {
+            background: transparent;
+            border: none;
+            color: #00ff00;
+            font-family: 'Ubuntu Mono', monospace;
+            width: 100%;
+            outline: none;
+        }
+
+        .mini-cursor {
+            display: inline-block;
+            width: 8px;
+            height: 16px;
+            background: #00ff00;
+            animation: blink 1s infinite;
+        }
+
+        /* Estilo do terminal GNU nano */
+        .nano-terminal {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    background: #000000;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    color: #00ff00;
+    font-family: 'Ubuntu Mono', monospace;
+    padding: 0; /* Removi o padding geral */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    font-size: 1.1em;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nano-header {
+    background: #00ff00;
+    color: #000000;
+    padding: 8px 10px; /* Ajuste do padding */
+    font-weight: bold;
+    text-align: left;
+    border-radius: 3px 3px 0 0; /* Arredonda apenas cantos superiores */
+    margin: 2px; /* Pequeno espaço da borda */
+}
+
+.nano-body {
+    flex-grow: 1; /* Ocupa todo espaço disponível */
+    overflow-y: auto;
+    padding: 15px;
+    line-height: 1.6;
+    margin: 0 2px; /* Pequeno espaço lateral */
+}
+
+.nano-footer {
+    background: #00ff00;
+    color: #000000;
+    padding: 8px 10px; /* Ajuste do padding */
+    text-align: center;
+    font-size: 0.9em;
+    border-radius: 0 0 3px 3px; /* Arredonda apenas cantos inferiores */
+    margin: 2px; /* Pequeno espaço da borda */
+}
+        footer {
+            position: fixed; /* Fixes the footer at the bottom of the viewport */
+            bottom: 0; /* Aligns the footer to the bottom */
+            width: 100%; /* Makes the footer span the entire width of the page */
+            background: hsla(0, 0%, 0%, 0.795); /* Black background */
+            color: #00ff00; /* Green text */
+            text-align: center; /* Centers the text */
+            padding: 10px; /* Adds padding for spacing */
+            font-size: 0.9em; /* Adjusts the font size */
+            z-index: 1000; /* Ensures the footer stays above other content */
+            border-top: 1px solid #00ff00; /* Adds a green border at the top */
+        }
+        /* -----------------------FIM SOBRE STYLES Contato--------------------- */
+
+
+
+        /*--------------------INDEX STYLES---------------------*/
+    
+        h1, h2, p {
+          text-align: center;
+          color: hwb(0 79% 21%); /* Define a mesma cor usada na página index */
+      }
+      /* Estilo Terminal Deepin (verde/preto) */
+      body {
+          font-family: 'Ubuntu Mono', monospace;
+          background-color: #000000;
+          color: #00ff00;
+          margin: 0;
+          padding: 0;
+          line-height: 1.6;
+      }
+      
+      header {
+          background: #000000;
+          color: #00ff00;
+          padding: 8px 0;
+          position: fixed;
+          width: 100%;
+          top: 0;
+          border-bottom: 1px solid #00ff00;
+          z-index: 1000;
+      }
+      
+      nav ul {
+          list-style: none;
+          margin: 0;
+          padding: 0 20px;
+          display: flex;
+      }
+      
+      nav ul li {
+          margin: 0 10px;
+      }
+      
+      nav ul li a {
+          color: #00ff00;
+          text-decoration: none;
+          padding: 5px 10px;
+          transition: all 0.3s;
+      }
+      
+      nav ul li a:hover {
+          background: #00ff00;
+          color: #000000;
+      }
+      
+      main {
+          padding: 80px 20px 20px;
+          max-width: 900px;
+          margin: 0 auto;
+      }
+      
+      .terminal-container {
+          margin: 80px auto;
+          max-width: 600px;
+          background: rgba(0, 0, 0, 0.849);
+          padding: 150px;
+          border: 1px solid #00ff00;
+      }
+      
+      .terminal-header {
+          color: #00ff00;
+          margin-bottom: 20px;
+          font-size: 1.5em;
+      }
+      
+      .terminal-output {
+          min-height: 200px;
+          margin-bottom: 15px;
+          overflow-y: auto;
+          font-size: 20px;
+          max-height: 300px;
+      }
+      
+      .command-line {
+          display: flex;
+          align-items: center;
+      }
+      
+      .prompt {
+          color: #00ff00;
+          font-size: 20px;
+          margin-right: 10px;
+      }
+      
+      #command-input {
+          background: transparent;
+          border: none;
+          color: #00ff00;
+          font-family: 'Ubuntu Mono', monospace;
+          font-size: 1em;
+          width: 80%;
+          outline: none;
+          caret-color: #00ff00;
+      }
+      
+      .blinking-cursor {
+          display: inline-block;
+          width: 8px;
+          height: 20px;
+          background: #00ff00;
+          animation: blink 1s infinite;
+      }
+      
+      @keyframes blink {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0; }
+      }
+      
+      footer {
+          background: #000000;
+          color: #00ff00;
+          
+          text-align: center;
+          padding: 15px 0;
+          margin-top: 50px;
+          font-size: 0.9em;
+          border-top: 1px solid #00ff00;
+      }
+      
+      @media (max-width: 768px) {
+          nav ul {
+              justify-content: center;
+              flex-wrap: wrap;
+          }
+          
+          .terminal-container {
+              margin: 50px auto;
+              padding: 20px;
+          }
+      }
+      footer {
+          position: fixed; /* Fixes the footer at the bottom of the viewport */
+          bottom: 0; /* Aligns the footer to the bottom */
+          width: 100%; /* Makes the footer span the entire width of the page */
+          background: hsla(0, 0%, 0%, 0.795); /* Black background */
+          color: #c4bebe; /* Green text */
+          text-align: center; /* Centers the text */
+          padding: 10px; /* Adds padding for spacing */
+          font-size: 0.9em; /* Adjusts the font size */
+          z-index: 1000; /* Ensures the footer stays above other content */
+          border-top: 1px solid #00ff00; /* Adds a green border at the top */
+      }
+      main {
+          text-align: center; /* Centers the main content */
+          padding: 15px 2px;
+         
+      }
+   /*--------------------FIM INDEX STYLES---------------------*/
+
+  /*--------------------SOBRE STYLES PORTFOLIO---------------------*/
+  <style>
+        
+  /* Efeitos extras para os projetos */
+#projetos {
+display: flex;
+flex-wrap: wrap;
+justify-content: center; /* Alterado para center */
+gap: 15px; /* Espaço reduzido */
+max-width: 1200px;
+margin: 0 auto;
+padding: 20px;
+}
+
+.projeto {
+opacity: 50%;
+transform: translateY(30px);
+transition: all 0.6s ease-out;
+padding: 15px; /* Reduzido */
+border-radius: 8px;
+background: hsla(0, 5%, 31%, 0.06);
+width: calc(33.333% - 20px); /* Cálculo ajustado */
+min-width: 280px; /* Reduzido para caber 3 em telas menores */
+box-sizing: border-box;
+margin: 0; /* Removida margem vertical */
+flex-shrink: 0; /* Impede que os itens encolham */
+}
+
+  
+  .projeto.visible {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  
+  .projeto img {
+      width: 100%; /* Agora usa 100% do container */
+      max-width: 400px; /* Limite máximo */
+      height: auto;
+      border-radius: 5px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+      display: block;
+      margin: 0 auto 15px; /* Espaço externo abaixo da imagem */
+  }
+  
+  .projeto h3 {
+      text-align: left;
+      margin-bottom: 10px;
+  }
+  
+  .projeto p {
+      text-align: center;
+  }
+  
+  /* Estilos para o carrossel */
+  .carousel {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto 15px;
+      border-radius: 5px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  }
+  
+  .carousel img {
+      position: relative;
+width: 100%;
+max-width: 400px;
+height: auto; /* Ajusta a altura automaticamente */
+overflow: hidden;
+  }
+  
+  .carousel:hover img {
+      transform: scale(1.1);
+  }
+  .carousel {
+position: relative;
+height: 880px; /* Ajuste conforme necessário */
+overflow: hidden;
+}
+
+.carousel img {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: contain;
+opacity: 0;
+transition: opacity 1s ease-in-out;
+}
+
+.carousel img:first-child {
+opacity: 1;
+}
+  
+  h1, h2, h3, p {
+      text-align: center;
+      color: hwb(0 79% 21%); /* Define a mesma cor usada na página index */
+  }
+  
+  /* Remova a div .projeto duplicada no HTML */
+
+
+  /* Terminal Mini */
+.mini-terminal {
+position: fixed; /* Faz o terminal flutuar na página */
+bottom: 20px; /* Posiciona na parte inferior da página */
+left: 20px; /* Posiciona à esquerda */
+width: 360px; /* Largura fixa */
+max-width: 480px; /* Limita a largura máxima */
+background: rgba(0, 0, 0, 0.9); /* Fundo escuro com transparência */
+border: 1px solid #00ff00; /* Borda verde */
+border-radius: 5px; /* Bordas arredondadas */
+padding: 12px; /* Espaço interno */
+z-index: 1000; /* Mantém acima do conteúdo */
+font-family: 'Ubuntu Mono', monospace; /* Fonte estilo terminal */
+color: #00ff00; /* Texto verde */
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
+}
+
+/* Estilo para telas menores (mobile) */
+@media (max-width: 768px) {
+.mini-terminal {
+  position: static; /* Remove o posicionamento fixo */
+  margin: 20px auto; /* Centraliza o terminal abaixo dos apps */
+  width: 100%; /* Faz o terminal ocupar toda a largura */
+  max-width: 480px; /* Limita a largura máxima */
+}
+}
+
+.terminal-header {
+display: flex;
+justify-content: space-between;
+margin-bottom: 10px;
+font-size: 0.9em;
+}
+
+.terminal-body {
+height: 120px; /* Aumenta a altura em 20% (antes era 100px) */
+overflow-y: auto; /* Permite rolagem se necessário */
+margin-bottom: 10px;
+}
+
+.terminal-input {
+display: flex;
+align-items: center;
+}
+
+.terminal-prompt {
+color: #00ff00;
+margin-right: 8px;
+}
+
+#terminal-cmd {
+background: transparent;
+border: none;
+color: #00ff00;
+font-family: 'Ubuntu Mono', monospace;
+width: 100%;
+outline: none;
+}
+
+.mini-cursor {
+display: inline-block;
+width: 8px;
+height: 16px;
+background: #00ff00;
+animation: blink 1s infinite;
+}
+/* ESTILO DA BARRA INFERIOR DA PAGINA */
+footer {
+      position: fixed; /* Fixes the footer at the bottom of the viewport */
+      bottom: 0; /* Aligns the footer to the bottom */
+      width: 100%; /* Makes the footer span the entire width of the page */
+      background: hsla(0, 0%, 0%, 0.795); /* Black background */
+      color: #00ff00; /* Green text */
+      text-align: center; /* Centers the text */
+      padding: 10px; /* Adds padding for spacing */
+      font-size: 0.9em; /* Adjusts the font size */
+      z-index: 1000; /* Ensures the footer stays above other content */
+      border-top: 1px solid #00ff00; /* Adds a green border at the top */
+  }
+
+    /*--------------------FIM SOBRE STYLES PORTFOLIO---------------------*/
+    
+   
